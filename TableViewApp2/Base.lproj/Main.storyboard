@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5rT-yg-cBk">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Multiplication Tables-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TableViewApp2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="na0-mV-YZG">
+                                <rect key="frame" x="133" y="111" width="127" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="127" id="KL0-Y7-uED"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zuf-59-ey6">
+                                <rect key="frame" x="270" y="111" width="113" height="34"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TbW-wo-gDb"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j0K-Kp-tqD">
+                                <rect key="frame" x="0.0" y="165" width="393" height="653"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="cTK-bP-pC2">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="55.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cTK-bP-pC2" id="wUh-i4-JCr">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="55.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zuf-59-ey6" firstAttribute="bottom" secondItem="na0-mV-YZG" secondAttribute="bottom" id="47v-s2-ac9"/>
+                            <constraint firstItem="Zuf-59-ey6" firstAttribute="top" secondItem="na0-mV-YZG" secondAttribute="top" id="5ug-Bu-Qjp"/>
+                            <constraint firstItem="na0-mV-YZG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="8xc-WU-pV8"/>
+                            <constraint firstItem="na0-mV-YZG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DGf-t6-Oyw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j0K-Kp-tqD" secondAttribute="trailing" id="FCt-3E-cub"/>
+                            <constraint firstItem="Zuf-59-ey6" firstAttribute="leading" secondItem="na0-mV-YZG" secondAttribute="trailing" constant="10" id="GgX-Ny-vDq"/>
+                            <constraint firstItem="j0K-Kp-tqD" firstAttribute="top" secondItem="na0-mV-YZG" secondAttribute="bottom" constant="20" id="RIA-Rh-5zK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="j0K-Kp-tqD" secondAttribute="bottom" id="hIJ-Iu-Dbh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zuf-59-ey6" secondAttribute="trailing" constant="10" id="j5c-Te-z1U"/>
+                            <constraint firstItem="j0K-Kp-tqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w8u-pP-we1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Multiplication Tables" id="US2-Bb-sS9"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="na0-mV-YZG" id="d4i-vu-397"/>
+                        <outlet property="tableView" destination="j0K-Kp-tqD" id="17E-Kr-g5L"/>
+                        <outlet property="tableViewBottom" destination="hIJ-Iu-Dbh" id="blY-gb-eES"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.64885496183206" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hWI-yy-rS0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5rT-yg-cBk" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SUo-2o-IGO">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="clJ-0n-TDQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRb-9F-tX5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38.931297709923662" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
